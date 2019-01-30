@@ -10116,20 +10116,7 @@ var Home = function Home(props) {
       lineNumber: 5
     },
     __self: this
-  }, "Hey! \u270B\uD83C\uDFFB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/sell",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, "Sell")));
+  }, "Hey! \u270B\uD83C\uDFFB"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
