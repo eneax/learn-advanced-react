@@ -1,13 +1,18 @@
 # Everything visible from the API goes here!
+# This is what we are going to interface to with JavaScript
 
-type Dog {
-  name: String!
-}
+# import * from './generated/prisma.graphql'
 
 type Mutation {
-  createDog(name: String!): Dog # take a name and make a Dog
+  createItem(
+    title: String,
+    description: String,
+    price: Int,
+    image: String,
+    largeImage: String,
+  ): Item!
 }
 
 type Query {
-  dogs: [Dog]!
+  items: [Item]!  
 }
