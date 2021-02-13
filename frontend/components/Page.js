@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
+import Header from './Header';
 
-const Page = ({ children }) => <main>{children}</main>;
+const Page = ({ children }) => (
+  <>
+    <Header />
+    <main>{children}</main>
+  </>
+);
 
 export default Page;
 
