@@ -1,23 +1,8 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-
+import Cart from './Cart';
 import Nav from './Nav';
-
-const HeaderStyled = styled.header`
-  .bar {
-    border-bottom: 10px solid var(--black, black);
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .sub-bar {
-    border-bottom: 1px solid var(--black, black);
-    display: grid;
-    grid-template-columns: 1fr auto;
-  }
-`;
+import Search from './Search';
 
 const Logo = styled.h1`
   font-size: 4rem;
@@ -26,7 +11,6 @@ const Logo = styled.h1`
   z-index: 2;
   background: red;
   transform: skew(-7deg);
-
   a {
     color: white;
     text-decoration: none;
@@ -35,18 +19,35 @@ const Logo = styled.h1`
   }
 `;
 
-const Header = () => (
-  <HeaderStyled>
-    <div className="bar">
-      <Logo>
-        <Link href="/">Sick Fits</Link>
-      </Logo>
-    </div>
-    <div className="sub-bar">
-      <p>Search</p>
-    </div>
-    <Nav />
-  </HeaderStyled>
-);
+const HeaderStyles = styled.header`
+  .bar {
+    border-bottom: 10px solid var(--black, black);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: space-between;
+    align-items: stretch;
+  }
 
-export default Header;
+  .sub-bar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-bottom: 1px solid var(--black, black);
+  }
+`;
+
+export default function Header() {
+  return (
+    <HeaderStyles>
+      <div className="bar">
+        <Logo>
+          <Link href="/">Sick fits</Link>
+        </Logo>
+        <Nav />
+      </div>
+      <div className="sub-bar">
+        <Search />
+      </div>
+      <Cart />
+    </HeaderStyles>
+  );
+}
